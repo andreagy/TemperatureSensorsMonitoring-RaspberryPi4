@@ -200,9 +200,7 @@ void GUIManager::displayStatistics() {
     float globalMin = statistics.getMinTemperature();
     float globalMax = statistics.getMaxTemperature();
     float globalAvg = statistics.getAverageTemperatureAllSensors();
-//    float predict_s1 = display_predict_temp("sensor1");
-//    float predict_s2 = display_predict_temp("sensor2");
-//    float predict_s3 = display_predict_temp("sensor3");
+
     // Display the summary
     ImGui::Spacing();
     ImGui::Spacing();
@@ -210,16 +208,6 @@ void GUIManager::displayStatistics() {
     ImGui::Text("  Minimum Temperature: %.2f °C", globalMin);
     ImGui::Text("  Maximum Temperature: %.2f °C", globalMax);
     ImGui::Text("  Average Temperature: %.2f °C", globalAvg);
-
-//    if (predict_s1 != -100) {
-//        ImGui::Text("  Prediction %s: %.2f °C", "sensor1", predict_s1);
-//    }
-//    if (predict_s2 != -100) {
-//        ImGui::Text("  Prediction %s: %.2f °C", "sensor2", predict_s2);
-//    }
-//    if (predict_s3 != -100) {
-//        ImGui::Text("  Prediction %s: %.2f °C", "sensor3", predict_s3);
-//    }
 
     ImGui::Spacing();
     ImGui::Spacing();

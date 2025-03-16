@@ -8,13 +8,13 @@
 #include <vector>
 #include <string>
 #include <GLFW/glfw3.h>
-#include <imgui.h>
-#include "DatabaseStorage.h"
-#include "SensorManager.h"
-#include "QueueManager.h"
-#include "Observer.h"
-#include "Statistics.h"
-#include "InfoNode.h"
+#include "imgui.h"
+#include "../DatabaseStorage.h"
+#include "../SensorManager.h"
+#include "../QueueManager.h"
+#include "../Observer.h"
+#include "../Statistics.h"
+#include "../InfoNode.h"
 
 class GUIManager {
 private:

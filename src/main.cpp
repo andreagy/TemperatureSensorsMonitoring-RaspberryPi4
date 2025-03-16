@@ -3,7 +3,7 @@
 #include "QueueManager.h"
 #include "DatabaseStorage.h"
 #include "SensorManager.h"
-#include "GUIManager.h"
+#include "gui/GUIManager.h"
 #include "TemperatureSensor.h"
 #include "Statistics.h"
 #include "LinearRegression.h"

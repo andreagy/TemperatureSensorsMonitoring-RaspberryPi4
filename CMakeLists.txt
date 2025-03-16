@@ -54,25 +54,13 @@ target_include_directories(imgui PUBLIC imgui imgui/backends ${SDL2_INCLUDE_DIRS
 # Link SDL2 and OpenGL to ImGui
 target_link_libraries(imgui PUBLIC SDL2::SDL2 OpenGL::GL GLEW::GLEW)
 
-add_executable(DataStructureAlgorithmsProject
-        main.cpp
-        TemperatureSensor.cpp
-        TemperatureSensor.h
-        InfoNode.h
-        QueueManager.h
-        QueueManager.cpp
-        DatabaseStorage.cpp
-        DatabaseStorage.h
-        SensorManager.h
-        SensorManager.cpp
-        Observer.h
-        GUIManager.h
-        GUIManager.cpp
-        LinearRegression.cpp
-        LinearRegression.h
-        Statistics.h
-        Statistics.cpp
-)
+# Add source files
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.h" "src/gui/*.cpp" "src/gui/*.h")
+
+# Include directories
+include_directories(src src/gui)
+
+add_executable(DataStructureAlgorithmsProject  ${SOURCES})
 
 target_include_directories(DataStructureAlgorithmsProject PRIVATE /usr/local/include)
 target_link_libraries(DataStructureAlgorithmsProject PRIVATE
